@@ -90,6 +90,7 @@ class character(General):
             return False
 
 
+
     def characterName(self,char,mystery=False) -> str:
 
         """
@@ -102,12 +103,12 @@ class character(General):
         try:
             name = self.charlist[int(char)]
         except:
-            if mystery == True:
-                name="???"
-            else:
-                name = char
+            name = char
 
+        if mystery == True:
+                name="???"
         return name
+
 
 class scene(General):
 
